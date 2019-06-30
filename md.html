@@ -1,0 +1,34 @@
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <style>
+    #sourcetextarea {
+        display: block;
+    }
+    #targetdiv {
+      border: 1px dashed #333333;
+      width: 600px;
+      height: 400px;
+    }  
+  </style>
+  <script src="md.js"></script>
+  <script>
+      function convert() {
+        var text = document.getElementById('sourcetextarea').value,
+            target = document.getElementById('targetdiv'),
+            converter = new showdown.Converter(),
+            html = converter.makeHtml(text);
+            target.innerHTML = html;
+      }  
+  </script>
+</head>
+<body>
+
+  <textarea id="sourcetextarea" rows="10" cols="82"></textarea>
+  <hr/>
+  <button id="convertbutton" onClick="convert()">Convert</button>
+  <hr/>
+  <div id="targetdiv"></div>
+
+</body>
+</html>
