@@ -1,6 +1,7 @@
 <html>
 <head>
   <meta charset="UTF-8"/>
+  <title>convert md to html</title>
   <style>
     #sourcetextarea {
         display: block;
@@ -13,7 +14,7 @@
   </style>
   <script src="md.js"></script>
   <script>
-      function convert() {
+      function converthtml() {
         var text = document.getElementById('sourcetextarea').value,
             target = document.getElementById('targetdiv'),
             converter = new showdown.Converter(),
@@ -26,7 +27,7 @@
 
   <textarea id="sourcetextarea" rows="10" cols="82"></textarea>
   <hr/>
-  <button id="convertbutton" onClick="convert()">Convert</button>
+  <button id="convertbutton" onClick="converthtml()">Convert md to html</button>
   <hr/>
   <div id="targetdiv"></div>
 
