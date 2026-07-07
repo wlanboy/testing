@@ -1,0 +1,12 @@
+#langtoncanvas {
+    display: block;
+    max-width: 100%;
+    border-radius: 8px;
+    image-rendering: pixelated;
+}
+
+.langton-hint {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}

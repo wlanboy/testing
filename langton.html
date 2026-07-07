@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Langton's Ant</title>
+    <link rel="stylesheet" href="gol.css" />
+    <link rel="stylesheet" href="langton.css" />
+</head>
+<body>
+
+    <main class="app">
+        <header class="app-header">
+            <a href="index.html" class="back-link">&larr; Startseite</a>
+            <h1>Langton's Ant</h1>
+            <p class="subtitle">Eine einfache Zustandsmaschine, die zu ueberraschender Komplexitaet fuehrt</p>
+        </header>
+
+        <section id="boardcontainer" class="board-card">
+            <canvas id="langtoncanvas"></canvas>
+        </section>
+
+        <p id="stepcounter" class="langton-hint">Schritte: 0</p>
+
+        <div class="controls">
+            <button id="start" class="btn btn-primary">Start</button>
+            <button id="step" class="btn btn-secondary">Einzelschritt</button>
+            <button id="clear" class="btn btn-secondary">Reset</button>
+        </div>
+    </main>
+
+    <script src="langton.js"></script>
+
+</body>
+</html>
