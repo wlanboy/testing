@@ -1,0 +1,83 @@
+.md-card {
+    width: 100%;
+    max-width: 760px;
+    padding: 16px;
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+    box-sizing: border-box;
+}
+
+.md-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.md-textarea {
+    display: block;
+    width: 100%;
+    min-height: 180px;
+    resize: vertical;
+    padding: 12px;
+    background: var(--cell-dead);
+    border: 1px solid var(--cell-border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: "Fira Code", Consolas, monospace;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+.md-textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.md-preview {
+    min-height: 120px;
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+.md-preview > *:first-child {
+    margin-top: 0;
+}
+
+.md-preview > *:last-child {
+    margin-bottom: 0;
+}
+
+.md-preview a {
+    color: var(--accent-hover);
+}
+
+.md-preview code {
+    background: var(--cell-dead);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "Fira Code", Consolas, monospace;
+}
+
+.md-preview pre {
+    background: var(--cell-dead);
+    padding: 12px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.md-preview pre code {
+    padding: 0;
+    background: none;
+}
+
+.md-preview blockquote {
+    margin: 0;
+    padding-left: 12px;
+    border-left: 3px solid var(--accent);
+    color: var(--text-muted);
+}

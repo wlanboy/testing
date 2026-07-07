@@ -1,35 +1,45 @@
-<html>
+<!DOCTYPE html>
+<html lang="de">
 <head>
-  <meta charset="UTF-8"/>
-  <title>convert md to html</title>
-  <style>
-    #sourcetextarea {
-        display: block;
-    }
-    #targetdiv {
-      border: 1px dashed #333333;
-      width: 600px;
-      height: 400px;
-    }  
-  </style>
-  <script src="md.js"></script>
-  <script>
-      function converthtml() {
-        var text = document.getElementById('sourcetextarea').value,
-            target = document.getElementById('targetdiv'),
-            converter = new showdown.Converter(),
-            html = converter.makeHtml(text);
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown Converter</title>
+    <link rel="stylesheet" href="gol.css" />
+    <link rel="stylesheet" href="md.css" />
+    <script src="md.js"></script>
+    <script>
+        function converthtml() {
+            var text = document.getElementById('sourcetextarea').value,
+                target = document.getElementById('targetdiv'),
+                converter = new showdown.Converter(),
+                html = converter.makeHtml(text);
             target.innerHTML = html;
-      }  
-  </script>
+        }
+    </script>
 </head>
 <body>
 
-  <textarea id="sourcetextarea" rows="10" cols="82"></textarea>
-  <hr/>
-  <button id="convertbutton" onClick="converthtml()">Convert md to html</button>
-  <hr/>
-  <div id="targetdiv"></div>
+    <main class="app">
+        <header class="app-header">
+            <a href="index.html" class="back-link">&larr; Startseite</a>
+            <h1>Markdown Converter</h1>
+            <p class="subtitle">Markdown eingeben und als HTML in der Vorschau ansehen</p>
+        </header>
+
+        <section class="md-card">
+            <label for="sourcetextarea" class="md-label">Markdown</label>
+            <textarea id="sourcetextarea" class="md-textarea" rows="10" placeholder="# Uberschrift&#10;&#10;Schreib hier dein Markdown..."></textarea>
+        </section>
+
+        <div class="controls">
+            <button id="convertbutton" class="btn btn-primary" onclick="converthtml()">In HTML umwandeln</button>
+        </div>
+
+        <section class="md-card">
+            <span class="md-label">Vorschau</span>
+            <div id="targetdiv" class="md-preview"></div>
+        </section>
+    </main>
 
 </body>
 </html>
