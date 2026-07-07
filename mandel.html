@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mandelbrot</title>
+    <link rel="stylesheet" href="gol.css" />
+    <link rel="stylesheet" href="mandel.css" />
+</head>
+<body>
+
+    <main class="app">
+        <header class="app-header">
+            <a href="index.html" class="back-link">&larr; Startseite</a>
+            <h1>Mandelbrot</h1>
+            <p class="subtitle">Klick ins Bild, um in die Mandelbrot-Menge hineinzuzoomen</p>
+        </header>
+
+        <section id="boardcontainer" class="board-card">
+            <canvas id="mandelcanvas"></canvas>
+        </section>
+
+        <div class="controls">
+            <button id="zoomout" class="btn btn-secondary">Zurueck</button>
+            <button id="reset" class="btn btn-secondary">Reset</button>
+        </div>
+    </main>
+
+    <script src="mandel.js"></script>
+
+</body>
+</html>
