@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lorenz-Attraktor</title>
+    <link rel="stylesheet" href="gol.css" />
+    <link rel="stylesheet" href="chaos.css" />
+</head>
+<body>
+
+    <main class="app">
+        <header class="app-header">
+            <a href="index.html" class="back-link">&larr; Startseite</a>
+            <h1>Lorenz-Attraktor</h1>
+            <p class="subtitle">Zwei Bahnen mit fast identischem Start laufen irgendwann auseinander</p>
+        </header>
+
+        <section id="boardcontainer" class="board-card">
+            <canvas id="chaoscanvas"></canvas>
+        </section>
+
+        <p id="info" class="chaos-hint"></p>
+
+        <div class="controls chaos-inputs">
+            <label>&rho; (Rayleigh-Zahl): <span id="rhovalue">28</span>
+                <input id="rho" type="range" min="1" max="50" step="0.5" value="28" />
+            </label>
+            <label>Startunterschied: <span id="deltavalue">0.001</span>
+                <input id="delta" type="range" min="0" max="3" step="1" value="1" />
+            </label>
+        </div>
+
+        <div class="controls">
+            <button id="start" class="btn btn-primary">Pause</button>
+            <button id="clear" class="btn btn-secondary">Reset</button>
+        </div>
+    </main>
+
+    <script src="lorenz.js"></script>
+
+</body>
+</html>
