@@ -1,0 +1,43 @@
+#collatzcanvas {
+    display: block;
+    max-width: 100%;
+    border-radius: 8px;
+    background: var(--bg-end);
+}
+
+.collatz-hint {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.collatz-inputs {
+    gap: 16px;
+}
+
+.collatz-inputs label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.collatz-inputs input[type="number"] {
+    width: 130px;
+    padding: 6px 10px;
+    border: 1px solid var(--cell-border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.collatz-sequence {
+    margin: 0;
+    max-width: 100%;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    word-break: break-word;
+    text-align: center;
+}

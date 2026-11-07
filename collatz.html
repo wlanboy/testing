@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collatz</title>
+    <link rel="stylesheet" href="gol.css" />
+    <link rel="stylesheet" href="collatz.css" />
+</head>
+<body>
+
+    <main class="app">
+        <header class="app-header">
+            <a href="index.html" class="back-link">&larr; Startseite</a>
+            <h1>Collatz-Vermutung</h1>
+            <p class="subtitle">gerade: n / 2, ungerade: 3n + 1 &ndash; alle Folgen muenden (vermutlich) in 1</p>
+        </header>
+
+        <section id="boardcontainer" class="board-card">
+            <canvas id="collatzcanvas"></canvas>
+        </section>
+
+        <p id="info" class="collatz-hint">Startzahlen: 0</p>
+
+        <div class="controls collatz-inputs">
+            <label>Startzahlen bis
+                <input id="limit" type="number" min="10" max="20000" value="3000" />
+            </label>
+            <label>Winkel gerade
+                <input id="angleeven" type="range" min="1" max="30" value="8" />
+            </label>
+            <label>Winkel ungerade
+                <input id="angleodd" type="range" min="1" max="30" value="16" />
+            </label>
+            <label>Einzelfolge
+                <input id="single" type="number" min="1" max="1000000000" placeholder="z.B. 27" />
+            </label>
+        </div>
+
+        <div class="controls">
+            <button id="start" class="btn btn-primary">Zeichnen</button>
+            <button id="clear" class="btn btn-secondary">Reset</button>
+        </div>
+
+        <p id="sequence" class="collatz-sequence"></p>
+    </main>
+
+    <script src="collatz.js"></script>
+
+</body>
+</html>
