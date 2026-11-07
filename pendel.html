@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doppelpendel</title>
+    <link rel="stylesheet" href="gol.css" />
+    <link rel="stylesheet" href="chaos.css" />
+</head>
+<body>
+
+    <main class="app">
+        <header class="app-header">
+            <a href="index.html" class="back-link">&larr; Startseite</a>
+            <h1>Doppelpendel</h1>
+            <p class="subtitle">Zwei Pendel, Startwinkel um 0,001 rad verschieden &ndash; bald bewegen sie sich ganz anders</p>
+        </header>
+
+        <section id="boardcontainer" class="board-card">
+            <canvas id="chaoscanvas"></canvas>
+        </section>
+
+        <p id="info" class="chaos-hint"></p>
+
+        <div class="controls chaos-inputs">
+            <label>Startwinkel oberes Pendel: <span id="a1value">120</span>&deg;
+                <input id="a1" type="range" min="0" max="180" step="1" value="120" />
+            </label>
+            <label>Startwinkel unteres Pendel: <span id="a2value">150</span>&deg;
+                <input id="a2" type="range" min="0" max="180" step="1" value="150" />
+            </label>
+        </div>
+
+        <div class="controls">
+            <button id="start" class="btn btn-primary">Pause</button>
+            <button id="clear" class="btn btn-secondary">Reset</button>
+        </div>
+    </main>
+
+    <script src="pendel.js"></script>
+
+</body>
+</html>
