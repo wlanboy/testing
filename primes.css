@@ -1,0 +1,14 @@
+#primecanvas {
+    display: block;
+    max-width: 100%;
+    border-radius: 8px;
+    image-rendering: pixelated;
+}
+
+.primes-hint {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-align: center;
+    min-height: 1.3em;
+}

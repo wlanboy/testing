@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primzahlen</title>
+    <link rel="stylesheet" href="gol.css" />
+    <link rel="stylesheet" href="primes.css" />
+</head>
+<body>
+
+    <main class="app">
+        <header class="app-header">
+            <a href="index.html" class="back-link">&larr; Startseite</a>
+            <h1>Primzahlen</h1>
+            <p class="subtitle">Ulam-Spirale und Sieb des Eratosthenes</p>
+        </header>
+
+        <section id="boardcontainer" class="board-card">
+            <canvas id="primecanvas"></canvas>
+        </section>
+
+        <p id="info" class="primes-hint">Faehre mit der Maus ueber eine Zelle</p>
+
+        <div class="controls">
+            <button id="start" class="btn btn-primary">Sieb starten</button>
+            <button id="step" class="btn btn-secondary">Einzelschritt</button>
+            <button id="all" class="btn btn-secondary">Alle Primzahlen</button>
+            <button id="clear" class="btn btn-secondary">Reset</button>
+        </div>
+    </main>
+
+    <script src="primes.js"></script>
+
+</body>
+</html>
