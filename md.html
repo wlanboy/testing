@@ -6,14 +6,20 @@
     <title>Markdown Converter</title>
     <link rel="stylesheet" href="gol.css" />
     <link rel="stylesheet" href="md.css" />
-    <script src="md.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"
+            integrity="sha384-GP2+CwBlakZSDJUr+E4JvbxpM75i1i8+RKkieQxzuyDZLG+5105E1OfHIjzcXyWH"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.4.18/dist/purify.min.js"
+            integrity="sha384-lkArbWjiZKuE+bzKbj1vOEF7DKYBDNvgwZMCt5OH8bdRB92zpzyNska9Q/XKPHQD"
+            crossorigin="anonymous"></script>
     <script>
         function converthtml() {
             var text = document.getElementById('sourcetextarea').value,
                 target = document.getElementById('targetdiv'),
                 converter = new showdown.Converter(),
                 html = converter.makeHtml(text);
-            target.innerHTML = html;
+            // showdown lässt eingebettetes HTML durch, deshalb vor dem Einfügen filtern
+            target.innerHTML = DOMPurify.sanitize(html);
         }
     </script>
 </head>
